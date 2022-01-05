@@ -17,10 +17,78 @@
 @import '_global';
 @import '_libs';
 @import '_forms';
+@import '_media';
 
 
+// header
 
+.header {
 
+  &__inner {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 40px 0 50px;
+  }
+}
 
+.menu {
+
+  &__list {
+    display: flex;
+    justify-content: space-between;   
+    position: relative;
+    &::after {
+      position: absolute;
+      content: 'new'; 
+      @extend %roboto-400;
+      font-size: 10px;
+      line-height: 1.5;
+      padding: 6px 10px;
+      color: $body;     
+      width: 40px;
+      height: 27px;
+      border-radius: 5px;
+      background-color: $orange;
+      top: -27px;
+      right: 113px;      
+    }    
+  }
+
+  &__item {       
+    margin-right: 44px;     
+    &:last-child {
+      margin-right: 0;
+    }         
+  }
+
+  &__link {     
+    color:$black;
+    padding-bottom: 5px;
+    transition: all 0.1s; 
+    &:hover {     
+      border-bottom: 2px solid $orange;                
+      text-shadow: 0 0.2px $hover;      
+    }
+  }
+}
+
+.login { 
+  border: 1px solid $orange;
+  border-radius: 5px;
+  background-color: $body;
+  padding: 15px 30px;
+  @extend %roboto-400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: $orange;
+  margin-right: 34px;
+  cursor: pointer;
+  transition: all 0.1s;
+  &:active {
+    color: $body;
+    background-color: $orange;
+  }
+}
 
 @import '_media';
