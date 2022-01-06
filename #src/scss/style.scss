@@ -189,47 +189,103 @@
 
 // home
 .home {
+  max-width: 1480px;
+  margin: 0 auto;
+  // padding: 0 15px;
+  background-color: $homebg;  
+  padding: 66px 170px;
 
-  &__inner {}
+  &__inner {   
+    display: flex;  
+    justify-content: space-between;    
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+   
+  }
 }
 
 .home-left {
+  max-width: 540px;
+  width: 100%;
 
-  &__subtitle {}
+  &__subtitle {
+    @extend %roboto-500;
+    font-size: 22px;
+    color: $orange;
+  }
 
-  &__title {}
+  &__title {
+    @extend %roboto-700;
+    font-size: 61px;
+    line-height: 1.2;
+    color: $title;
+    margin-bottom: 25px;
+  }
 
-  &__descr {}
-
-  &__link {}
+  &__descr {  
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 46px;
+  }  
 }
 
-.home-right {
+.home-right {  
 
-  &__offer {}
+  &__offer {   
+    background-color: $body;
+    padding: 20px 30px;
+    display: inline-block;
+    text-align: center;
+    // position: absolute;
+  }
 
-  &__offer-text {}
+  &__offer-text,
+  &__delivery-text,
+  &__response-title {
+    font-size: 22px;
+    color: $footer;
+  }
 
-  &__delivery {}
+  &__delivery {
+    display: inline-flex;    
+    background-color: $body;
+    padding: 20px 21px;    
+    align-items: center;
+    // position: absolute;
+  }  
 
-  &__delivery-text {}
+  &__response {
+    display: inline-flex;
+    background-color: $body;
+    padding: 24px 20px;
+    align-items: center;
+    // position: absolute;
+  }
 
-  &__response {}
-
-  &__response-img {}
+  &__response-img {
+    margin-right: 20px;
+  }
 
   &__response-box {}
 
-  &__response-title {}
-
-  &__response-subtitle {}
+   
+  &__response-subtitle {
+    font-size: 16px;
+  }
 
   &__response-star {}
 }
 
-.svg-offer {}
+.svg-offer {
+  display: inline-block;
+  margin-bottom: 12px;
+}
 
-.svg-delivery {}
+.svg-delivery {
+  display: inline-block;
+  margin-right: 20px;
+}
 
 
 
