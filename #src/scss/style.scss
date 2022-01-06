@@ -24,6 +24,10 @@
 
 .header {
 
+  .logo {
+    margin-right: 90px;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between; 
@@ -50,22 +54,21 @@
       height: 27px;
       border-radius: 5px;
       background-color: $orange;
-      top: -27px;
-      right: 113px;      
+      top: -30px;
+      right: 111px;      
     }    
   }
 
-  &__item {       
-    margin-right: 44px;     
-    &:last-child {
-      margin-right: 0;
-    }         
-  }
-
+  &__item {  
+    &:not(:last-child){     
+     margin-right: 44px;
+    }
+  }  
+     
   &__link {     
     color:$black;
     padding-bottom: 5px;
-    transition: all 0.1s; 
+    transition: all 0.2s; 
     &:hover {     
       border-bottom: 2px solid $orange;                
       text-shadow: 0 0.2px $hover;      
@@ -77,18 +80,163 @@
   border: 1px solid $orange;
   border-radius: 5px;
   background-color: $body;
-  padding: 15px 30px;
+  padding: 14px 30px;
   @extend %roboto-400;
   font-size: 18px;
   line-height: 1.5;
   color: $orange;
   margin-right: 34px;
   cursor: pointer;
-  transition: all 0.1s;
+  transition: all 0.3s;
+  &:hover {
+    text-shadow: 0 0.3px $orange;   
+    text-decoration: underline;   
+  }
   &:active {
     color: $body;
     background-color: $orange;
   }
 }
+
+// footer
+.footer {
+
+  &__inner {
+    padding: 130px 0 40px;
+  }
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+
+ 
+  &__descr {
+    max-width: 252px;
+    width: 100%;
+  }
+
+  .logo {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  &__title {
+    font-size: 18px;
+    line-height: 1.5;
+    color: $footer;
+    margin-bottom: 20px;    
+  } 
+
+  &__menu-item,
+  &__company-item,
+  &__help-item {
+    margin-bottom: 15px;    
+  }
+
+  &__menu-link,
+  &__company-link,
+  &__help-link {
+    color: $accent;
+    transition: all 0.1s;
+    &:hover {
+      border-bottom: 2px solid $orange;
+      text-shadow: 0 0.2px $hover;
+    }
+  }
+
+  &__menu, 
+  &__company,
+  &help {
+    max-width: 160px;
+  }     
+}
+
+
+.footer-bottom {
+  padding-top: 25px;
+  border-top: 1px solid $grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  &__copy {
+    font-size: 14px;
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__social-item {  
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+  
+  &__social-link {
+    display: inline-block;
+    padding: 15px;
+    border: 1px solid $grey;
+    border-radius: 50%;
+    &:hover {
+      border: 1px solid $orange;
+    }
+  }
+}
+
+// home
+.home {
+
+  &__inner {}
+}
+
+.home-left {
+
+  &__subtitle {}
+
+  &__title {}
+
+  &__descr {}
+
+  &__link {}
+}
+
+.home-right {
+
+  &__offer {}
+
+  &__offer-text {}
+
+  &__delivery {}
+
+  &__delivery-text {}
+
+  &__response {}
+
+  &__response-img {}
+
+  &__response-box {}
+
+  &__response-title {}
+
+  &__response-subtitle {}
+
+  &__response-star {}
+}
+
+.svg-offer {}
+
+.svg-delivery {}
+
+
+
+
+
+
+	
+
 
 @import '_media';
