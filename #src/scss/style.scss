@@ -190,24 +190,23 @@
 // home
 .home {
   max-width: 1480px;
-  margin: 0 auto;
-  // padding: 0 15px;
+  margin: 0 auto;  
   background-color: $homebg;  
-  padding: 66px 170px;
+  padding: 80px 57px 65px 170px;
+  position: relative;
 
   &__inner {   
     display: flex;  
-    justify-content: space-between;    
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
-   
+    justify-content: space-between;         
   }
 }
 
 .home-left {
-  max-width: 540px;
+  max-width: 455px;
   width: 100%;
+  margin-bottom: 90px;  
+  position: relative;
+  z-index: 2;
 
   &__subtitle {
     @extend %roboto-500;
@@ -231,13 +230,23 @@
 }
 
 .home-right {  
+ 
+  &__img {
+    position: absolute;    
+    top: 65px;
+    right: 220px;
+  }
 
   &__offer {   
     background-color: $body;
     padding: 20px 30px;
-    display: inline-block;
+    border-radius: 5px;    
     text-align: center;
-    // position: absolute;
+    width: 152px;
+    height: 173px; 
+    position: absolute;    
+    right: 585px;
+    top: 65px;
   }
 
   &__offer-text,
@@ -250,31 +259,36 @@
   &__delivery {
     display: inline-flex;    
     background-color: $body;
-    padding: 20px 21px;    
+    padding: 20px;   
+    border-radius: 5px;
     align-items: center;
-    // position: absolute;
+    width: 223px;
+    height: 82px;
+    position: absolute;
+    right: 35px;
+    top: 100px;
   }  
 
   &__response {
     display: inline-flex;
     background-color: $body;
     padding: 24px 20px;
+    border-radius: 5px;
     align-items: center;
-    // position: absolute;
+    width: 278px;
+    height: 122px;
+    position: absolute;
+    right: 5px;
+    bottom: 130px;
   }
 
   &__response-img {
-    margin-right: 20px;
-  }
-
-  &__response-box {}
-
+    margin-right: 20px;   
+  } 
    
   &__response-subtitle {
     font-size: 16px;
-  }
-
-  &__response-star {}
+  } 
 }
 
 .svg-offer {
@@ -282,10 +296,11 @@
   margin-bottom: 12px;
 }
 
-.svg-delivery {
-  display: inline-block;
+.svg-delivery {  
   margin-right: 20px;
 }
+
+
 
 
 
