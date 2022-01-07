@@ -166,8 +166,12 @@ gulp.task('svgsprite', function () {
         }
       },
     }))
-    .pipe(dest(path.build.img))
+    // .pipe(dest(path.build.img))
+    .pipe(dest([source_folder + '/img']))
+  
+  
 })
+
 
 function fontsStyle() {
 let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');

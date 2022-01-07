@@ -1,10 +1,16 @@
 $body: #FFFFFF;
-$accent: #6E6868;
+$accent: #6B6867;
 $orange: #DA5D1A;
 $black: #000000;
 $hover: #1A1A1A;
+$footer:#0A0603;
+$grey: rgba(107, 104, 103, 0.2);
+$homebg:rgba(211, 117, 52, 0.2);
+$title: #0D0404;
+// $gradient1: #DA5D1A;
+// $gradient2:#FF7D38;
 
-// $title: #000000;
+
 // $default: #222222;
 // $brown: #402F2C;
 // $header: #F9F6F5;
@@ -44,8 +50,5 @@ $hover: #1A1A1A;
   font-weight: 400;
 }
 
-%spline-700 {
-  font-family: 'SplineSans-Bold',sans-serif;
-  font-weight: 700;
-}
+
 
