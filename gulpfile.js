@@ -82,7 +82,7 @@ function css () {
       autoprefixer({
         overrideBrowserslist: ['last 10 versions'],
         cascade: true,
-        grid: true
+        grid: true,
       })
   )
     .pipe(webpcss())
