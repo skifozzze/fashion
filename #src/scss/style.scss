@@ -338,10 +338,8 @@
     max-width: 565px;
     width: 100%;
     text-align: center;
-    margin-bottom: 60px;  
-  }
-
-  &__link {}
+    margin-bottom: 60px; 
+  }  
 }
 
 
@@ -408,21 +406,129 @@
 }
 
 .support-item {
-&::before {
-  position: absolute;
-  content: '';
-  background-image: url('../img/icons/icons.svg#support');
-  width: 56px;
-  height: 59px;
-  background-repeat: no-repeat;
-  top: 40px;
-  margin: auto;
-  right: 0;
-  left: 0;
-}
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url('../img/icons/icons.svg#support');
+    width: 56px;
+    height: 59px;
+    background-repeat: no-repeat;
+    top: 40px;
+    margin: auto;
+    right: 0;
+    left: 0;
+  }
 }
 
-.link {}
+// discount
+
+.discount {
+
+  &__inner {
+    padding-top: 130px;
+    display: grid;   
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;    
+  }
+
+  &__title {
+   color: $orange;   
+   position: relative;
+   
+   span {
+     position: absolute;
+     color: $body;
+     transform: rotate(-20deg);
+     top: 29px;    
+     left: 50px;       
+    }
+  }
+}
+
+.discount-item {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 285px;
+  padding: 30px;
+  position: relative;
+  color: $body;
+  &:nth-child(1) {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  &:nth-child(2) {   
+    grid-column: span 2;
+  }
+
+  &__box {
+    background-color: $orange;
+    border-radius: 50%;   
+    text-align: center;    
+  } 
+
+  &__link {
+    display: inline-block;
+    text-decoration: underline;
+    transition: all 0.3s;
+    color: $body;
+    &:hover {
+      color: $hover;
+    }
+  }  
+
+  &__num {
+    @extend %roboto-700;
+  }
+}
+
+.big-box {
+  width: 220px;
+  height: 220px;
+  padding: 30px;
+  position: absolute;
+  bottom: 32px;
+  left: 30px;
+}
+
+.big-text {
+  margin-bottom: 17px;
+}
+
+.big-num {
+  font-size: 61px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.big-link {
+  font-size: 22px;
+}
+
+.small-box {
+  width: 150px;
+  height: 150px;
+  padding: 15px 15px 20px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.small-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.small-num {
+ font-size: 44px;
+ line-height: 1.3;
+}
+
+
+
+
+
 
 
 
