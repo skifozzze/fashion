@@ -3,8 +3,8 @@
   @font-face {
     font-family: $font_name;
     font-display: swap;
-    src: url("../fonts/#{$file_name}.woff") format("woff"),
-    url("../fonts/#{$file_name}.woff2") format("woff2");
+    src: url("../fonts/#{$file_name}.woff2") format("woff2"),
+    url("../fonts/#{$file_name}.woff") format("woff");
     font-weight: #{$weight};
     font-style: #{$style};
   }
@@ -187,27 +187,27 @@
   }
 }
 
+
 // home
 .home {
   max-width: 1480px;
   margin: 0 auto;  
   background-color: $homebg;  
-  padding: 80px 57px 65px 170px;
-  position: relative;
+  // padding: 80px 57px 65px 170px;
+  padding: 65px 292px 65px 170px;
+  // position: relative;
 
   &__inner {   
     display: flex;  
-    justify-content: space-between;         
+    // justify-content: space-between;         
   }
 }
 
 .home-left {
+  padding-top: 14px;
   max-width: 455px;
   width: 100%;
-  margin-bottom: 90px;  
-  position: relative;
-  z-index: 2;
-
+  
   &__subtitle {
     @extend %roboto-500;
     font-size: 22px;
@@ -219,22 +219,21 @@
     font-size: 61px;
     line-height: 1.2;
     color: $title;
-    margin-bottom: 25px;
+    margin-bottom: 33px;
   }
 
   &__descr {  
     max-width: 400px;
     width: 100%;
-    margin-bottom: 46px;
+    margin-bottom: 45px;
   }  
 }
 
 .home-right {  
- 
+ position: relative;
+
   &__img {
-    position: absolute;    
-    top: 65px;
-    right: 220px;
+    max-width: 575px;   
   }
 
   &__offer {   
@@ -244,9 +243,9 @@
     text-align: center;
     width: 152px;
     height: 173px; 
-    position: absolute;    
-    right: 585px;
-    top: 65px;
+    position: absolute;       
+    top: 0;
+    left: 45px;
   }
 
   &__offer-text,
@@ -264,10 +263,10 @@
     align-items: center;
     width: 223px;
     height: 82px;
-    position: absolute;
-    right: 35px;
-    top: 100px;
-  }  
+    position: absolute;   
+    top: 40px;
+    left: 520px;
+  }    
 
   &__response {
     display: inline-flex;
@@ -278,8 +277,8 @@
     width: 278px;
     height: 122px;
     position: absolute;
-    right: 5px;
-    bottom: 130px;
+    top: 400px;
+    left: 520px;
   }
 
   &__response-img {
@@ -287,6 +286,7 @@
   } 
    
   &__response-subtitle {
+    margin-bottom: 4px;
     font-size: 16px;
   } 
 }
