@@ -237,6 +237,9 @@
   }
 
   &__offer {   
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
     background-color: $body;
     padding: 20px 30px;
     border-radius: 5px;    
@@ -246,6 +249,14 @@
     position: absolute;       
     top: 0;
     left: 45px;
+    &::before {
+      content: '';
+      background-image: url('../img/icons/icons.svg#offer');
+      width: 78px;
+      height: 79px;
+      background-repeat: no-repeat;
+      margin-bottom: 20px;      
+    }
   }
 
   &__offer-text,
@@ -256,7 +267,7 @@
   }
 
   &__delivery {
-    display: inline-flex;    
+    display: flex;    
     background-color: $body;
     padding: 20px;   
     border-radius: 5px;
@@ -266,6 +277,14 @@
     position: absolute;   
     top: 40px;
     left: 520px;
+    &::before {
+      content: '';
+      background-image: url('../img/icons/icons.svg#delivery');
+      width: 35px;
+      height: 35px;
+      background-repeat: no-repeat;
+      margin-right: 20px;
+    }
   }    
 
   &__response {
@@ -299,6 +318,112 @@
 .svg-delivery {  
   margin-right: 20px;
 }
+
+// advantages
+
+.advantages {
+
+  &__inner {
+    padding-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {    
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    max-width: 565px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;  
+  }
+
+  &__link {}
+}
+
+
+.advantages-box {
+  display: flex;
+  justify-content: space-between;
+  &.advantages-box {
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    padding: 120px 30px 40px 30px;
+    border: 1px solid $orangeLight;
+    border-radius: 5px;
+    text-align: center;
+    color: $accent;
+    transition: all 0.3s;
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &:hover {
+      border: 1px solid $orange;
+    }    
+  }
+
+  &__title {
+    @extend %roboto-700;
+    font-size: 31px;
+    line-height: 1.4;
+    color: $title;
+    margin-bottom: 20px;
+  } 
+}
+
+.shipping-item {
+  &::before {
+   position: absolute;
+   content: '';
+   background-image: url('../img/icons/icons.svg#shiping');
+   width: 89px;
+   height: 59px;
+   background-repeat: no-repeat;
+   top: 40px;
+   margin: auto;
+   right: 0;
+   left: 0;
+  }
+}
+
+.payment-item {
+ &::before {
+   position: absolute;
+   content: '';
+   background-image: url('../img/icons/icons.svg#payment');
+   width: 84px;
+   height: 59px;
+   background-repeat: no-repeat;
+   top: 40px;
+   margin: auto;
+   right: 0;
+   left: 0;
+ }
+}
+
+.support-item {
+&::before {
+  position: absolute;
+  content: '';
+  background-image: url('../img/icons/icons.svg#support');
+  width: 56px;
+  height: 59px;
+  background-repeat: no-repeat;
+  top: 40px;
+  margin: auto;
+  right: 0;
+  left: 0;
+}
+}
+
+.link {}
+
 
 
 
