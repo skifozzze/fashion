@@ -44,6 +44,34 @@
 
 .menu {
 
+  &__btn {
+    display: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer; 
+    padding: 0;   
+    outline: none;
+    &::after,
+    &::before {
+      content: '';    
+      width: 50px;
+      height: 3px;      
+      background-color: $orange; 
+      display: block;     
+    }
+    &::before {
+      margin-bottom: 5px;;
+    }
+  }
+
+  &__btn-line {
+    width: 50px;
+    height: 3px;
+    background-color: $orange;
+    display: block;  
+    margin-bottom: 5px;      
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;   
@@ -74,9 +102,10 @@
   &__link {     
     color:$black;
     padding-bottom: 5px;
-    transition: all 0.2s; 
+      border-bottom: 1px solid transparent;
+    transition: all 0.3s; 
     &:hover {     
-      border-bottom: 2px solid $orange;                
+      border-bottom: 1px solid $orange;                
       text-shadow: 0 0.2px $hover;      
     }
   }
@@ -116,7 +145,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 
  
   &__descr {
@@ -155,8 +184,9 @@
 
   &__menu, 
   &__company,
-  &help {
+  &__help {
     max-width: 160px;
+    margin-bottom: 10px;
   }     
 }
 
@@ -344,7 +374,6 @@
     margin-bottom: 60px; 
   }  
 }
-
 
 .benefits-box {
   display: flex;
@@ -541,6 +570,7 @@
   }
 
   &__button {
+    display: flex;    
     margin-bottom: 60px;
   }
 
@@ -743,6 +773,7 @@
   outline: 2px solid $orange;
   position: absolute;  
   top: 110px;
+  z-index: 5;
 
   &__next {
     right: -70px;    
